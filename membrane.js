@@ -14,27 +14,27 @@ var scriptInject = function(uri){
     document.querySelectorAll("head")[0].appendChild(_injectJS_script);
 }
 
-var objectSort = function(array,sortKey,sortFunction) {
+Array.prototype.vSort = function(sortKey,sortFunction) {
     switch (sortFunction) {
         case "number-asc":
-            return array.sort(function(a, b){
+            return this.sort(function(a, b){
                 return a[sortKey]-b[sortKey];
             });
             break;
         case "number-desc":
-            return array.sort(function(a, b){
+            return this.sort(function(a, b){
                 return b[sortKey]-a[sortKey];
             });
             break;
         case "alpha-desc":
-            return array.sort(function(a,b){
+            return this.sort(function(a,b){
                 if(a[sortKey].toLowerCase() < b[sortKey].toLowerCase()) return 1;
                 if(a[sortKey].toLowerCase() > b[sortKey].toLowerCase()) return -1;
                 return 0;
             });
             break;
         default:
-            return array.sort(function(a,b){
+            return this.sort(function(a,b){
                 if(a[sortKey].toLowerCase() < b[sortKey].toLowerCase()) return -1;
                 if(a[sortKey].toLowerCase() > b[sortKey].toLowerCase()) return 1;
                 return 0;
