@@ -44,6 +44,6 @@ Array.prototype.vSort = function(sortKey,sortFunction) {
 }
 
 var gotoElem = function(sel) {
-    var targetElem = sel; // must be an element object, not a selector string
+    var targetElem = $$(sel); // must be an element object, not a selector string
     window.scrollTo(targetElem.offsetLeft+targetElem.offsetWidth/2-window.innerWidth/2,targetElem.offsetTop+targetElem.offsetHeight/2-window.innerHeight/2);
 }
