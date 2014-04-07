@@ -31,8 +31,10 @@ scriptInject("//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
 + `Array.prototype.vSort(key,sortType)` - sort an array of objects by a specific value
 ```javascript
 var arrayOfObjects = [{"somekey":2.72,"otherkey":"waffles"},{"somekey":3.14,"otherkey":"blueberry"}]
-arrayOfObjects.vSort("somekey","number-desc") --> [{"somekey":3.14,"otherkey":"blueberry"},{"somekey":2.72,"otherkey":"waffles"}]
-arrayOfObjects.vSort("otherkey") --> [{"somekey":3.14,"otherkey":"blueberry"},{"somekey":2.72,"otherkey":"waffles"}]
+arrayOfObjects.vSort("somekey","number-desc")
+--> [{"somekey":3.14,"otherkey":"blueberry"},{"somekey":2.72,"otherkey":"waffles"}]
+arrayOfObjects.vSort("otherkey")
+--> [{"somekey":3.14,"otherkey":"blueberry"},{"somekey":2.72,"otherkey":"waffles"}]
 // all sortTypes are "number-asc", "number-desc", "alpha-desc" and "alpha-asc". defaults to "alpha-asc"
 ```
 
