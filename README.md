@@ -12,4 +12,4 @@
 + `gotoElem(selector)` - scrolls to a point on the page such that the specified element is in the center
 + Much more awesome stuff to come...
 
-## [Download](https://raw.githubusercontent.com/z-------------/membrane.js/master/membrane.js)
+## [Download](https://github.com/z-------------/membrane.js/archive/master.zip)
