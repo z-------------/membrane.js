@@ -47,3 +47,9 @@ var gotoElem = function(sel) {
     var targetElem = $$(sel); // must be an element object, not a selector string
     window.scrollTo(targetElem.offsetLeft+targetElem.offsetWidth/2-window.innerWidth/2,targetElem.offsetTop+targetElem.offsetHeight/2-window.innerHeight/2);
 }
+
+var addStyle = function(sel,style) {
+    var newStylesheet = document.createElement("style");
+    newStylesheet.innerHTML = sel+"{"+style+"}";
+    $$$("head")[0].appendChild(newStylesheet);
+}

@@ -43,6 +43,11 @@ arrayOfObjects.vSort("otherkey")
 gotoElem("#myDiv")
 ```
 
++ `addStyle(selector,styles)` - adds some styles to the page's stylesheet. These styles will also apply to future elements
+```javascript
+addStyle(".tile","width:"+window.innerWidth/5+"px")
+```
+
 + Much more awesome stuff to come...
 
 ## Download
