@@ -45,4 +45,6 @@ gotoElem("#myDiv")
 
 + Much more awesome stuff to come...
 
-## [Download](https://github.com/z-------------/membrane.js/archive/master.zip)
+## Download
++ [master.zip](https://github.com/z-------------/membrane.js/archive/master.zip)
++ [Just membrane.js](https://raw.githubusercontent.com/z-------------/membrane.js/master/membrane.js)
