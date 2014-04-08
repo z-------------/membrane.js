@@ -89,3 +89,9 @@ String.prototype.parseURL = function(target) {
             return parser.href; break;
     }
 }
+
+var loop = function(func,count) {
+    for (i=0;i<count;i++) {
+        func();
+    }
+}

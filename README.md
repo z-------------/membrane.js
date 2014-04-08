@@ -63,6 +63,14 @@ parse a url for the hostname, port, parameters and other useful things
 // all parseTypes are "protocol", "hostname", "port", "path", "patharray", "params", "paramsarray", "hash", "host"
 ```
 
+###`loop(func,count)`
+execute a function a specific number of times. Essentially a `for` loop on variable `i` starting from 0
+```javascript
+loop(function(){
+    console.log(i);
+},5);
+```
+
 ####Much more awesome stuff to come...
 
 ## Download
