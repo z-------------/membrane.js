@@ -73,12 +73,11 @@ String.prototype.parseURL = function(target) {
             return parser.search; break;
         case "paramsarray":
             var _urlparams = parser.search.substring(1,parser.search.length).split("&"); // ["foo=bar","bax=qux","waffles=pie"]
-            var _paramsobject = [];
+            var _paramsobject = {};
             for (i=0;i<_urlparams.length;i++) {
-                _paramsobject.push({});
                 var _key = _urlparams[i].split("=")[0];
                 var _val = _urlparams[i].split("=")[1];
-                _paramsobject[i][_key] = _val;
+                _paramsobject[_key] = _val;
             };
             return _paramsobject;
             break;
