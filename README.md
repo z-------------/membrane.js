@@ -51,7 +51,7 @@ addStyle(".tile:after","width:"+window.innerWidth/5+"px")
 + `String.protoype.parseURL(parseType)` - parse a url for the hostname, port, parameters and other useful things
 ```javascript
 "http://www.example.com/?foo=bar&baz=qux".parseURL("paramsarray")
---> [{foo:"bar"},{baz:"qux"}]
+--> {foo:"bar",baz:"qux"}
 // all parseTypes are "protocol", "hostname", "port", "path", "patharray", "params", "paramsarray", "hash", "host"
 ```
 
