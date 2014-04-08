@@ -45,7 +45,7 @@ gotoElem("#myDiv")
 
 + `addStyle(selector,styles)` - adds some styles to the page's stylesheet. Useful for dynamically styling :before and other pseudo-elements
 ```javascript
-addStyle(".tile","width:"+window.innerWidth/5+"px")
+addStyle(".tile:after","width:"+window.innerWidth/5+"px")
 ```
 
 + Much more awesome stuff to come...
