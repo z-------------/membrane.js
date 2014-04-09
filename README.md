@@ -69,6 +69,11 @@ execute a function a specific number of times. Essentially a `for` loop on varia
 loop(function(){
     console.log(i);
 },5);
+--> 0
+--> 1
+--> 2
+--> 3
+--> 4
 ```
 
 ####Much more awesome stuff to come...
