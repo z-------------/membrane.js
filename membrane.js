@@ -1,3 +1,10 @@
+/*
+ *  membrane.js\
+ *  ------------------------------------
+ *  An open source project by Zack Guard
+ *  zacharyguard.co.nf
+*/
+
 var $$ = function(sel) {
     return document.querySelector(sel);
 }
