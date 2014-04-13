@@ -1,6 +1,6 @@
 # membrane.js
 
-#### A super light collection of JavaScript addon functions.
+#### A super light miscellaneous JavaScript library.
 
 ## Features
 
