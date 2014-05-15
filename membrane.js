@@ -1,5 +1,5 @@
 /*
- *  membrane.js\
+ *  membrane.js
  *  ------------------------------------
  *  An open source project by Zack Guard
  *  zacharyguard.co.nf
@@ -13,9 +13,15 @@ var $$$ = function(sel) {
     return document.querySelectorAll(sel);
 }
 
-Array.prototype.contains = function(q){if(this.indexOf(q) != -1){return true}else{return false}}
+Array.prototype.contains = function(q) {
+    if(this.indexOf(q) != -1){
+        return true;
+    } else {
+        return false;
+    }
+}
 
-var scriptInject = function(uri){
+var scriptInject = function(uri) {
     var _injectJS_script = document.createElement("script");
     _injectJS_script.src = uri;
     document.querySelectorAll("head")[0].appendChild(_injectJS_script);
@@ -101,4 +107,14 @@ var loop = function(func,count) {
     for (i=0;i<count;i++) {
         func();
     }
+}
+
+String.prototype.containsArrayElement = function(array) {
+    var returnVal = false;
+    for(i=0;i<array.length;i++){
+        if (this.indexOf(array[i]) != -1){
+            returnVal = true;
+        }
+    }
+    return returnVal;
 }
