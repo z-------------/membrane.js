@@ -82,9 +82,9 @@ String.prototype.parseURL = function(target) {
         case "patharray":
             var _pathstring = parser.pathname.substring(1,this.length-1); // cut off leading and ending slashes (/)
             return _pathstring.split("/"); break;
-        case "params":
+        case "paramsstring":
             return parser.search; break;
-        case "paramsarray":
+        case "params":
             var _urlparams = parser.search.substring(1,parser.search.length).split("&"); // ["foo=bar","bax=qux","waffles=pie"]
             var _paramsobject = {};
             for (i=0;i<_urlparams.length;i++) {
