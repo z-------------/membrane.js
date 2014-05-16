@@ -60,7 +60,7 @@ parse a url for the hostname, port, parameters and other useful things
 ```javascript
 "http://www.example.com/?foo=bar&baz=qux".parseURL("paramsarray")
 --> {foo:"bar",baz:"qux"}
-// all parseTypes are "protocol", "hostname", "port", "path", "patharray", "params", "paramsarray", "hash", "host"
+// all parseTypes are "protocol", "hostname", "port", "path", "patharray", "params", "paramsstring", "hash", "host"
 ```
 
 ###`loop(func,count)`
