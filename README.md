@@ -21,13 +21,13 @@ $$$("h2")
 ###`Array.prototype.contains(value)`
 check if an array contains a specific value
 ```javascript
-var myArray = ["waffles",3.14,true,"I love pie"]
-myArray.contains(3.14) --> true
-myArray.contains("blueberry") --> false
+var myArray = ["waffles", 3.14, true, "I love pie"]
+myArray.contains(3.14) // true
+myArray.contains("blueberry") // false
 ```
 
 ###`scriptInject(url)`
-inject a JavaScript library (like jQuery or Membrane) to the page
+inject a script to the document
 ```javascript
 scriptInject("//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
 ```
@@ -35,13 +35,21 @@ scriptInject("//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
 ###`Array.prototype.vSort(key,sortType)`
 sort an array of objects by a specific value
 ```javascript
-var arrayOfObjects = [{"somekey":2.72,"otherkey":"waffles"},{"somekey":3.14,"otherkey":"blueberry"}]
-arrayOfObjects.vSort("somekey","number-desc")
---> [{"somekey":3.14,"otherkey":"blueberry"},{"somekey":2.72,"otherkey":"waffles"}]
+var arrayOfObjects = [{
+    somekey: 2.72,
+    otherkey: "waffles"
+},{
+    somekey: 3.14,
+    otherkey: "blueberry"
+}]
+
+arrayOfObjects.vSort("somekey", "number-desc")
+// [{"somekey":3.14,"otherkey":"blueberry"},{"somekey":2.72,"otherkey":"waffles"}]
 arrayOfObjects.vSort("otherkey")
---> [{"somekey":3.14,"otherkey":"blueberry"},{"somekey":2.72,"otherkey":"waffles"}]
-// all sortTypes are "number-asc", "number-desc", "alpha-desc" and "alpha-asc". defaults to "alpha-asc"
+// [{"somekey":3.14,"otherkey":"blueberry"},{"somekey":2.72,"otherkey":"waffles"}]
 ```
+
+Allowed `sortTypes` are `"number-asc"`, `"number-desc"`, `"alpha-desc"` and `"alpha-asc"`. Defaults to `"alpha-asc"`.
 
 ###`gotoElem(selector)`
 scrolls to a point on the page such that the specified element is in the center
@@ -52,28 +60,23 @@ gotoElem("#myDiv")
 ###`addStyle(selector,styles)`
 adds some styles to the page's stylesheet. Useful for dynamically styling :before and other pseudo-elements
 ```javascript
-addStyle(".tile:after","width:"+window.innerWidth/5+"px")
+addStyle(".tile:after", "width:" + window.innerWidth / 5 + "px")
 ```
 
 ###`String.protoype.parseURL(parseType)`
 parse a url for the hostname, port, parameters and other useful things
 ```javascript
-"http://www.example.com/?foo=bar&baz=qux".parseURL("paramsarray")
---> {foo:"bar",baz:"qux"}
+"http://www.example.com/?foo=bar&baz=qux".parseURL("params")
+--> { foo: "bar", baz: "qux"}
 // all parseTypes are "protocol", "hostname", "port", "path", "patharray", "params", "paramsstring", "hash", "host"
 ```
 
 ###`loop(func,count)`
-execute a function a specific number of times. Essentially a `for` loop on variable `i` starting from 0
+execute a function a specific number of times.
 ```javascript
 loop(function(){
-    console.log(i);
+    console.log("i like waffles!");
 },5);
---> 0
---> 1
---> 2
---> 3
---> 4
 ```
 
 ####Much more awesome stuff to come...
